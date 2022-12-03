@@ -24,7 +24,7 @@ module.exports = ({ products }) => {
         .join('\n');
 
     return layout({
-        content: `
+        contentAdded: `
         <section>
         <div class="container">
             <div class="columns">

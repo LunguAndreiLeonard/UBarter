@@ -163,6 +163,7 @@ li:focus {
     cursor: pointer;
     margin: 20px;
     color: black;
+    z-index: 3;
 }
 
 .bar1,
@@ -190,14 +191,56 @@ li:focus {
 #recent-prod {
     display: block;
     background-color: #0b1d23;
-    border-radius: 20px;
-    height: 100px;
+    border-radius: 30px;
+    height: 130px;
     max-width: 100%;
     margin: 0 20px;
 }
 
+#inline-prod {
+    display: grid;
+    max-width: 400px !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    margin: 10px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+}
+
+
+#figure-inline {
+    border-radius: 20px !important;
+    width: 4rem;
+    margin-top: 5px;
+    padding: 5px;
+
+
+}
+
+.prod-title-inline {
+    font-size: 0.7rem !important;
+}
+
 .title {
     color: #ccc !important;
+}
+
+#iframe-account {
+    width: 300px;
+    height: 600px;
+    z-index: 2;
+    position: absolute;
+    left: 75%;
+    border-radius: 20px;
+    top: 30%;
+    overflow-y: hidden;
+}
+
+.background {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(122deg, rgba(0, 0, 0, 1) 0%, rgb(10, 36, 42) 0%);
+    border-radius: 20px;
 }
 
 

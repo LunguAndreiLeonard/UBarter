@@ -1,4 +1,4 @@
-module.exports = ({ content, contentAdded }) => {
+module.exports = ({ content, contentSignIn }) => {
     return `
     <!DOCTYPE html>
         <html lang="en">
@@ -37,17 +37,19 @@ module.exports = ({ content, contentAdded }) => {
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-        </ul>
-        <section class="section-spaces">
         
-                <h1>Recent products added</h1>
-                <div id="recent-prod">
-                ${contentAdded}
-                </div>
-        </section
+</div>
+        </ul>
+        </nav>
         <section class="section-spaces">
             ${content}
         </section>
+       
+
+        
+
+
+       
         </body>
         <script>
         function dropdownFunction() {

@@ -28,8 +28,32 @@ module.exports = ({ products }) => {
         })
         .join('\n');
 
+    const inLineProducts = products
+        .map(product => {
+            return `
+            <div class="inline-media">
+            <figure>
+                <img id="figure-inline" src="data:image/png;base64, ${product.image}"/>
+            </figure>
+            <div class="prod-title-inline">
+                <p>${product.title}</p>
+            </div>
+            </div>
+        `;
+        })
+        .join('\n');
+
     return layout({
         content: `
+        <section class="section-spaces">
+        <h1>Recent products added</h1>
+        <div id="recent-prod">
+        <div id="inline-prod">
+        ${inLineProducts}
+        </div>
+        </div>
+</section
+
         <section>
         <div class="container">
             <div class="columns">
