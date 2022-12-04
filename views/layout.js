@@ -50,6 +50,12 @@ module.exports = ({ content, contentSignIn }) => {
         <section class="section-spaces">
             ${content}
         </section>
+       
+
+        
+
+
+       
         </body>
 
         <script>
