@@ -163,6 +163,7 @@ li:focus {
     cursor: pointer;
     margin: 20px;
     color: black;
+    z-index: 3;
 }
 
 .bar1,
@@ -190,16 +191,98 @@ li:focus {
 #recent-prod {
     display: block;
     background-color: #0b1d23;
-    border-radius: 20px;
-    height: 100px;
+    border-radius: 30px;
+    height: 130px;
     max-width: 100%;
     margin: 0 20px;
+}
+
+#inline-prod {
+    display: grid;
+    max-width: 400px !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    margin: 10px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+}
+
+
+#figure-inline {
+    border-radius: 20px !important;
+    width: 4rem;
+    margin-top: 5px;
+    padding: 5px;
+
+
+}
+
+.prod-title-inline {
+    font-size: 0.7rem !important;
 }
 
 .title {
     color: #ccc !important;
 }
 
+#iframe-account {
+    width: 300px;
+    height: 600px;
+    z-index: 2;
+    position: absolute;
+    left: 75%;
+    border-radius: 20px;
+    top: 30%;
+    overflow-y: hidden;
+}
+
+.background {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(122deg, rgba(0, 0, 0, 1) 0%, rgb(10, 36, 42) 0%);
+    border-radius: 20px;
+}
+
+
+.sidenav {
+    height: 50vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 23vh;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 20%;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
 
 
 

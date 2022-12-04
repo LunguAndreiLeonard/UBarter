@@ -1,4 +1,4 @@
-module.exports = ({ content, contentAdded }) => {
+module.exports = ({ content, contentSignIn }) => {
     return `
     <!DOCTYPE html>
         <html lang="en">
@@ -32,24 +32,36 @@ module.exports = ({ content, contentAdded }) => {
             </div>
             <li>|</li>
             <input id="search-bar" type="text" placeholder="Search..">
-            <div class="burger-menu" onclick="burgerMenu(this)">
+            <div class="burger-menu" onclick="burgerMenu(this);openNav();">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
+                
             </div>
+            <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/signin">Login</a>
+    <a href="/signup">Register</a>
+</div>
+
+</div>
         </ul>
-        <section class="section-spaces">
-        
-                <h1>Recent products added</h1>
-                <div id="recent-prod">
-                ${contentAdded}
-                </div>
-        </section
+        </nav>
         <section class="section-spaces">
             ${content}
         </section>
         </body>
+
         <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
         function dropdownFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
