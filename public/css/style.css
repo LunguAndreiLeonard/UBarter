@@ -1,7 +1,7 @@
 html,
 body {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(122deg, rgba(0, 0, 0, 1) 0%, rgba(17, 54, 60, 1) 0%);
+    background: rgb(17, 54, 60);
+    background: radial-gradient(circle, rgba(17, 54, 60, 1) 45%, rgba(16, 37, 52, 1) 94%);
     margin: 0px;
     padding: 0px;
 }
@@ -10,6 +10,11 @@ h1 {
     font-size: 3em !important;
     margin: 30px !important;
     margin-top: 12% !important;
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
 }
 
 nav {
@@ -51,7 +56,7 @@ nav li {
     display: inline;
     margin: 0 10px;
     background-color: #ffffff00;
-    color: rgb(0, 0, 0);
+    color: aliceblue;
     padding: 16px;
     font-size: 2em;
     border: none;
@@ -71,7 +76,7 @@ nav input[type=text] {
 
 .dropbtn {
     background-color: #ffffff00;
-    color: rgb(0, 0, 0);
+    color: aliceblue;
     font-size: 2em;
     border: none;
     cursor: pointer;
@@ -79,7 +84,7 @@ nav input[type=text] {
 
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: #102c3496;
+    background-color: #11374196;
     border-radius: 20px;
 }
 
@@ -125,10 +130,27 @@ li:focus {
     z-index: 1;
 }
 
+::-webkit-scrollbar-track {
+    background-color: #102c34d0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.481);
+    border-radius: 20px;
+}
+
 .dropdown-content::-webkit-scrollbar-track {
     background-color: #102c34d0;
     border-radius: 10px;
 }
+
+
 
 .dropdown-content::-webkit-scrollbar {
     width: 10px;
@@ -199,9 +221,9 @@ li:focus {
 
 #inline-prod {
     display: grid;
-    max-width: 400px !important;
+    max-width: 100% !important;
     grid-auto-flow: column;
-    grid-auto-columns: 21%;
+    grid-auto-columns: 10%;
     margin: 10px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -325,10 +347,13 @@ img {
     flex-wrap: wrap;
 
 
+
 }
 
 .card-footer-item i {
     margin-right: 10px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
 
 
 }
@@ -345,12 +370,16 @@ img {
 
 .product-card .card-footer {
     justify-content: center;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
 
 }
 
 .product-card .card-footer form {
     display: block;
     width: 100%;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
 }
 
 .admin>div.container {
@@ -383,11 +412,17 @@ img {
     border: none;
     width: 100%;
     height: 50px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
 
 }
 
 .product-card .card-footer button i {
     margin-right: 10px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
 }
 
 #cart .cart-item h3 {
@@ -435,6 +470,28 @@ img {
 
 .card {
     border-radius: 30px;
+    background-color: rgba(255, 255, 255, .15) !important;
+    backdrop-filter: blur(5px) !important;
+    color: aliceblue;
 
+}
 
+.card-content {
+    color: aliceblue !important;
+}
+
+.subtitle {
+    color: aliceblue !important;
+}
+
+.column .is-one-quarter {
+    border-radius: 30% !important;
+}
+
+.card-footer {
+    border-radius: 30px;
+}
+
+form {
+    border-radius: 30px;
 }

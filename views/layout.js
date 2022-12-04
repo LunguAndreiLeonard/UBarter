@@ -42,6 +42,7 @@ module.exports = ({ content, contentSignIn }) => {
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/signin">Login</a>
     <a href="/signup">Register</a>
+    <a href ="/cart">Favorites</a>
 </div>
 
 </div>

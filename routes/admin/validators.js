@@ -5,7 +5,7 @@ module.exports = {
     requireTitle: check('title')
         .trim()
         .isLength({ min: 5, max: 20 })
-        .withMessage('Must be a valid title'),
+        .withMessage('Must be a valid name'),
     requireDescription: check('description')
         .trim()
         .isLength({ min: 10, max: 100 })
@@ -27,10 +27,6 @@ module.exports = {
             }
 
         }),
-    requireTitle: check('name')
-        .trim()
-        .isLength({ min: 3, max: 20 })
-        .withMessage('Must be a valid name'),
     requirePassword: check('password')
         .trim()
         .isLength({ min: 3, max: 20 })

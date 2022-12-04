@@ -13,18 +13,18 @@ const router = express.Router();
 //image storage
 var upload = multer({ storage: multer.memoryStorage() });
 
-router.get('/admin/:id/products', requireAuth, async (req, res) => {
+router.get('/admin/products', requireAuth, async (req, res) => {
 
     const products = await productsRepo.getAll();
     res.send(productsIndexTemplate({ products }));
 });
 
-router.get('/admin/:id/products/new', requireAuth, (req, res) => {
+router.get('/admin/products/new', requireAuth, (req, res) => {
 
     res.send(productsNewTemplate({}));
 });
 
-router.post('/admin/:id/products/new',
+router.post('/admin/products/new',
     requireAuth,
     //handling the upload
     upload.single('image'),
@@ -38,10 +38,10 @@ router.post('/admin/:id/products/new',
 
         await productsRepo.create({ title, description, price, image });
 
-        res.redirect('/admin/:id/products');
+        res.redirect('/admin/products');
     });
 
-router.get('/admin/:id/products/:id/edit', requireAuth,
+router.get('/admin/products/:id/edit', requireAuth,
     async (req, res) => {
         const product = await productsRepo.getOne(req.params.id);
 
@@ -51,7 +51,7 @@ router.get('/admin/:id/products/:id/edit', requireAuth,
         res.send(productsEditTemplate({ product }));
     });
 
-router.post('/admin/:id/products/:id/edit',
+router.post('/admin/products/:id/edit',
     requireAuth,
     upload.single('image'),
     [requireTitle, requireDescription, requirePrice],
@@ -72,12 +72,12 @@ router.post('/admin/:id/products/:id/edit',
             return res.send('Could not find item');
         }
 
-        res.redirect('/admin/:id/products');
+        res.redirect('/admin/products');
     })
 
-router.post('/admin/:id/products/:id/delete', requireAuth, async (req, res) => {
+router.post('/admin/products/:id/delete', requireAuth, async (req, res) => {
     await productsRepo.delete(req.params.id);
 
-    res.redirect('/admin/:id/products');
+    res.redirect('/admin/products');
 })
 module.exports = router;

@@ -34,7 +34,7 @@ router.post('/signup',
         //session is added by cookie session 
         req.session.userId = user.id;
 
-        res.redirect('/admin/:id/products')
+        res.redirect('/admin/products')
     });
 
 router.get('/signout', (req, res) => {
@@ -60,7 +60,7 @@ router.post('/signin', [
 
         req.session.userId = user.id;
 
-        res.redirect('/admin/:id/products')
+        res.redirect('/admin/products')
     });
 
 
