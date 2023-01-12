@@ -504,3 +504,34 @@ img {
 form {
     border-radius: 30px;
 }
+
+
+table {
+    background-color: rgba(255, 255, 255, .15) !important;
+    backdrop-filter: blur(5px) !important;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+th {
+    color: aliceblue !important;
+}
+
+td {
+    color: aliceblue;
+}
+
+label {
+    color: aliceblue !important;
+}
+
+input {
+    background-color: #0b1d23 !important;
+    color: aliceblue;
+}
+
+textarea {
+    background-color: #0b1d23;
+    border-radius: 5px;
+    color: aliceblue;
+}
