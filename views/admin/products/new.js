@@ -22,11 +22,6 @@ module.exports = ({ errors }) => {
         <textarea rows="5" column="5" placeholder="Description" name="description"></textarea>
         <p class="help is-danger">${getError(errors, 'description')}</p>
         </div>
-        <div class="field">
-              <label class="label">Price</label>
-              <input class="input" placeholder="Price" name="price">
-              <p class="help is-danger">${getError(errors, 'price')}</p>
-            </div>
             <div class="field">
             <label class="label">Image</label>            
             <input type="file" name="image" />
