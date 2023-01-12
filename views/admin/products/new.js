@@ -3,10 +3,10 @@ const { getError } = require('../../helpers');
 
 
 module.exports = ({ errors }) => {
-    return layout({
-        // multipart shares form into little parts to backend
+  return layout({
+    // multipart shares form into little parts to backend
 
-        content: `
+    content: `
         <div class="columns is-centered">
         <div class="column is-half">
           <h1 class="subtitle">Create a Product</h1>
@@ -38,6 +38,6 @@ module.exports = ({ errors }) => {
         </div>
 
         `
-    });
+  });
 
 }

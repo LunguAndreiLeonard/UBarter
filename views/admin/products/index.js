@@ -6,7 +6,7 @@ module.exports = ({ products }) => {
         <tr>
         <td>${product.title}</td>
         <td>${product.description}</td>
-        <td>${product.price}</td>
+        <td></td>
         <td>
         <a href="/admin/products/${product.id}/edit">
             <button class="button is-link">
@@ -26,7 +26,7 @@ module.exports = ({ products }) => {
     return layout({
         content: `
         <div class="control">
-        <h1 class="subtitle">Products</h1>  
+        <h1 class="subtitle">Products to barter</h1>  
         <a href="/admin/products/new" class="button is-primary">New Product</a>
         </div>
         <table class="table">
@@ -34,7 +34,7 @@ module.exports = ({ products }) => {
         <tr>
             <th>Title</th>
             <th>Description</th>
-            <th>Price</th>
+            <th></th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>

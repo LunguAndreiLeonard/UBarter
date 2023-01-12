@@ -16,7 +16,7 @@ module.exports = ({ content, contentSignIn }) => {
 
         <img id="logo-barter" src="../images/logoBarter.png">
         <ul>
-            <li>Home</li>
+            <li><a href="/">Home</a></li>
             <div class="dropdown">
                 <button onclick="dropdownFunction()" class="dropbtn">Categories</button>
                 <div id="myDropdown" class="dropdown-content">
