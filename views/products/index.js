@@ -7,12 +7,12 @@ module.exports = ({ products }) => {
         <div class="column is-one-quarter">
             <div class="card product-card">
             <figure>
-                <img src="data:image/png;base64, ${product.image}"/>
+                <img class="img-presentation" src="data:image/png;base64, ${product.image}"/>
             </figure>
             <div class="card-content">
                 <h3 class="subtitle">${product.title}</h3>
                 <h4 class="subtitle">${product.description}</h3>
-              
+            
             </div>
             <footer class="card-footer">
                 <form action="/cart/products" method="POST">

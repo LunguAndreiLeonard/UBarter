@@ -14,8 +14,8 @@ const router = express.Router();
 var upload = multer({ storage: multer.memoryStorage() });
 
 router.get('/admin/products', requireAuth, async (req, res) => {
-
-    const products = await productsRepo.getAll();
+    const userId = req.session.userId;
+    const products = await productsRepo.getAllByUserId(userId);
     res.send(productsIndexTemplate({ products }));
 });
 
@@ -35,8 +35,9 @@ router.post('/admin/products/new',
 
         const image = req.file.buffer.toString('base64');
         const { title, description } = req.body;
+        const userId = req.session.userId;
 
-        await productsRepo.create({ title, description, image });
+        await productsRepo.create({ title, description, image, userId });
 
         res.redirect('/admin/products');
     });

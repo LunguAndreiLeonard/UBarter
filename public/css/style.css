@@ -240,12 +240,27 @@ li:focus {
 
 
 #figure-inline {
-    border-radius: 20px !important;
-    width: 4rem;
-    margin-top: 5px;
-    padding: 5px;
+    border-radius: 180px !important;
+    width: 5rem !important;
+    height: 80px;
+    margin-top: 5px !important;
+    padding: 5px !important;
 
 
+}
+
+.img-presentation {
+    height: 90px;
+    width: 50%;
+    border-radius: 20px;
+    transition: transform .2s;
+}
+
+.img-presentation:hover {
+    transform: scale(1.5);
+    width: 80%;
+    height: 200px !important;
+    z-index: 99 !important;
 }
 
 .prod-title-inline {
@@ -434,8 +449,31 @@ img {
     border-radius: 30px;
 }
 
+.column.space {
+    padding: 5%;
+    flex-grow: 0;
+}
+
+.cart-item.message {
+    text-align: justify !important;
+    display: block;
+}
+
+.subtitle.left-align {
+    text-align: right !important;
+    margin: 0px;
+    display: block !important;
+    float: right !important;
+}
+
+
+
 #cart .cart-item h3 {
     margin: 0;
+}
+
+.button.is-warning {
+    margin: 10px;
 }
 
 .cart-item {
@@ -491,6 +529,26 @@ img {
 .column .is-one-quarter {
     border-radius: 30% !important;
 }
+
+
+
+.card.product-card {
+    height: 300px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+figure {
+    height: 90px;
+}
+
+.card-content {
+    height: 165px !important;
+}
+
+/* .card-footer {
+    align-self: flex-end !important;
+} */
 
 .card-footer {
     border-radius: 30px;
