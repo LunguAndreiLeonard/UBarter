@@ -533,7 +533,7 @@ img {
 
 
 .card.product-card {
-    height: 300px !important;
+    height: 350px !important;
     display: flex;
     flex-direction: column;
 }
@@ -543,7 +543,7 @@ figure {
 }
 
 .card-content {
-    height: 165px !important;
+    height: 210px !important;
 }
 
 /* .card-footer {
