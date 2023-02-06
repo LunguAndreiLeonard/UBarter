@@ -46,7 +46,7 @@ module.exports = ({ products }) => {
     return layout({
         content: `
         <section class="section-spaces">
-        <h1>Recent products added</h1>
+        <h1>Recent products:</h1>
         <div id="recent-prod">
         <div id="inline-prod">
         ${inLineProducts}

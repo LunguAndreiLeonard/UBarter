@@ -31,7 +31,8 @@ module.exports = ({ content, contentSignIn }) => {
                 </div>
             </div>
             <li>|</li>
-            <input id="search-bar" type="text" placeholder="Search..">
+            <input id="search-bar" type="text" placeholder="Search.." onkeyup="filterProducts()">
+            
             <div class="burger-menu" onclick="burgerMenu(this);openNav();">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -51,12 +52,7 @@ module.exports = ({ content, contentSignIn }) => {
         <section class="section-spaces">
             ${content}
         </section>
-       
 
-        
-
-
-       
         </body>
 
         <script>
@@ -64,7 +60,7 @@ module.exports = ({ content, contentSignIn }) => {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
         }
-
+        
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
@@ -88,6 +84,24 @@ module.exports = ({ content, contentSignIn }) => {
                 }
             }
         }
+
+function filterProducts() {
+    var input, filter, products, i;
+    input = document.getElementById("search-bar");
+    filter = input.value.toUpperCase();
+    products = document.getElementsByClassName("products");
+    for (i = 0; i < products.length; i++) {
+        var product = products[i].getElementsByClassName("is-one-quarter");
+        for (j = 0; j < product.length; j++) {
+            if (product[j].textContent.toUpperCase().indexOf(filter) > -1) {
+                product[j].style.display = "";
+            } else {
+                product[j].style.display = "none";
+            }
+        }
+    }
+}
+
     
         function burgerMenu(x) {
             x.classList.toggle("change");
