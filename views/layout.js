@@ -31,21 +31,16 @@ module.exports = ({ content, contentSignIn }) => {
                 </div>
             </div>
             <li>|</li>
-<<<<<<< HEAD
             <input id="search-bar" type="text" placeholder="Search.." onkeyup="filterProducts()">
             
-            <div class="burger-menu" onclick="burgerMenu(this);openNav();">
-=======
-            <input id="search-bar" type="text" placeholder="Search..">
-            <div class="burger-menu" onclick="burgerMenu();toggleNav()">
->>>>>>> 20ea36e62621e7c4c7bb9f72d8e832eb3eb60b12
+              <div class="burger-menu" onclick="burgerMenu();toggleNav()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
                 
             </div>
             <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="burgerMenu();toggleNav()">&times;</a>
+<a href="javascript:void(0)" class="closebtn" onclick="burgerMenu();toggleNav()">&times;</a>
     <a href="/signin">Login</a>
     <a href="/signup">Register</a>
     <a href ="/cart">Favorites</a>
@@ -70,15 +65,8 @@ module.exports = ({ content, contentSignIn }) => {
             }
             sidenavIsOpen = !sidenavIsOpen;
         }
-<<<<<<< HEAD
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-        }
-=======
 
->>>>>>> 20ea36e62621e7c4c7bb9f72d8e832eb3eb60b12
+
         function dropdownFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
