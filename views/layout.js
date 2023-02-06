@@ -31,16 +31,21 @@ module.exports = ({ content, contentSignIn }) => {
                 </div>
             </div>
             <li>|</li>
+<<<<<<< HEAD
             <input id="search-bar" type="text" placeholder="Search.." onkeyup="filterProducts()">
             
             <div class="burger-menu" onclick="burgerMenu(this);openNav();">
+=======
+            <input id="search-bar" type="text" placeholder="Search..">
+            <div class="burger-menu" onclick="burgerMenu();toggleNav()">
+>>>>>>> 20ea36e62621e7c4c7bb9f72d8e832eb3eb60b12
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
                 
             </div>
             <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="burgerMenu();toggleNav()">&times;</a>
     <a href="/signin">Login</a>
     <a href="/signup">Register</a>
     <a href ="/cart">Favorites</a>
@@ -56,15 +61,24 @@ module.exports = ({ content, contentSignIn }) => {
         </body>
 
         <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
+        var sidenavIsOpen = false;
+        function toggleNav() {
+            if (sidenavIsOpen) {
+                document.getElementById("mySidenav").style.width = "0";
+            } else {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            sidenavIsOpen = !sidenavIsOpen;
         }
+<<<<<<< HEAD
         
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
         }
+=======
+
+>>>>>>> 20ea36e62621e7c4c7bb9f72d8e832eb3eb60b12
         function dropdownFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
@@ -103,8 +117,8 @@ function filterProducts() {
 }
 
     
-        function burgerMenu(x) {
-            x.classList.toggle("change");
+        function burgerMenu() {
+            document.getElementsByClassName("burger-menu")[0].classList.toggle("change");
         }
         </script>
     </html>
