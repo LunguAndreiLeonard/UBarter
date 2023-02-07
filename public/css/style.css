@@ -525,6 +525,29 @@ img {
 
 }
 
+#chat-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    width: 50px;
+    border-bottom-left-radius: 180px;
+    border-top-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+}
+
+.fa-comment.a {
+    position: absolute;
+    width: 0px;
+    height: 20px !important;
+    color: #818181;
+}
+
+.fa-heart {
+    color: red !important;
+
+}
 
 .card {
     border-radius: 30px;

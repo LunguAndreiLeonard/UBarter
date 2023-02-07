@@ -33,7 +33,7 @@ module.exports = ({ content, contentSignIn }) => {
             <li>|</li>
             <input id="search-bar" type="text" placeholder="Search.." onkeyup="filterProducts()">
             
-              <div class="burger-menu" onclick="burgerMenu();toggleNav()">
+            <div class="burger-menu" onclick="burgerMenu();toggleNav()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>

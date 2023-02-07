@@ -5,7 +5,6 @@ const usersRepo = require('../../repositories/users');
 const signupTemplate = require('../../views/admin/auth/signup')
 const signinTemplate = require('../../views/admin/auth/signin')
 const { requireEmail, requirePassword, requirePasswordConfirmation, requireValidEmail, requireMatchPassword } = require('./validators')
-const chatappTemplate = require('../../views/admin/chat/chat')
 const router = express.Router();
 
 router.get('/signup', (req, res) => {
@@ -13,9 +12,9 @@ router.get('/signup', (req, res) => {
     res.send(signupTemplate({ req }));
 });
 
-router.get('/chatapp', (req, res) => {
-    res.send(chatappTemplate({ req }));
-})
+// router.get('/chatapp', (req, res) => {
+//     res.send(chatappTemplate({ req }));
+// })
 
 router.post('/signup',
     [

@@ -8,9 +8,11 @@ const app = express();
 const cartsRouter = require('./routes/carts')
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const { v4: uuidV4 } = require('uuid')
+const axios = require('axios');
 
 
-
+app.set('view engine', 'ejs')
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,27 +24,26 @@ app.use(productsRouter);
 app.use(adminProductsRouter);
 app.use(cartsRouter);
 
+app.get('/chatapp', (req, res) => {
+    res.redirect(`/${uuidV4()}`)
+})
+
+app.get('/:room', (req, res) => {
+    res.render('room', { roomId: req.params.room })
+})
 
 
-//socket.io connection
 io.on('connection', socket => {
-    console.log('User connected: ', socket.id);
+    socket.on('join-room', (roomId, userId) => {
+        socket.join(roomId)
+        socket.to(roomId).broadcast.emit('user-connected', userId)
 
-    socket.on('disconnect', () => {
-        console.log('User disconnected: ', socket.id);
-    });
-
-    socket.on('message', message => {
-        console.log('Received message: ', message);
-        io.emit('message', message);
-    });
-});
-
-
-
+        socket.on('disconnect', () => {
+            socket.to(roomId).broadcast.emit('user-disconnected', userId)
+        })
+    })
+})
 
 //the port where Express do its thing
-app.listen(3001, () => {
-    console.log('Listening at port 3001');
-});
+server.listen(3000)
 

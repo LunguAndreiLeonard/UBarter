@@ -6,6 +6,10 @@ module.exports = ({ products }) => {
             return `
         <div class="column is-one-quarter">
             <div class="card product-card">
+            <button  id="chat-button" onclick="window.location.href='/chatapp'">
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-comment a"></i>
+            </button>
             <figure>
                 <img class="img-presentation" src="data:image/png;base64, ${product.image}"/>
             </figure>
@@ -18,7 +22,7 @@ module.exports = ({ products }) => {
                 <form action="/cart/products" method="POST">
                 <input hidden value ="${product.id}" name="productId" />
                 <button class="button has-icon is-inverted">
-                    <i class="fa fa-shopping-cart"></i> Add to Favorites
+                    <i class="fa fa-heart"></i> Add to Favorites
                 </button>
                 </form>
             </footer>

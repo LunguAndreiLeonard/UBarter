@@ -11,8 +11,9 @@ module.exports = ({ items }) => {
           <h3 class = "subtitle left-align"> ${item.product.description}</h3>
           <div class="cart-right">
           <div>
-          <button class="button is-warning">
+          <button  class="button is-warning" onclick="window.location.href='/chatapp'">
           <span class="icon is-small">
+
                     <i class="fa fa-comment"></i>
                   </span>
                 </button>
